@@ -3,9 +3,6 @@ body {
     background-color: dimgrey;
 }
 
-#cv {
-    
-}
 
 #about {
     width:82%;
@@ -20,6 +17,7 @@ body {
 
 p {
     color: black;
+    position: absolute;
 }
 
 
