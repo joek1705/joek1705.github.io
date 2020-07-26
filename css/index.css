@@ -1,0 +1,60 @@
+body{
+    background-color: blue;
+}
+
+a{
+    color: white;    
+}
+
+p{
+    font-size: large;
+    margin-left: 1%;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#business-card{
+    border-radius: 1%;
+    margin-left: 10%;
+    width:80%;
+    margin-top: 10%;
+    background-color: white;
+    border-color: black;
+    border: 1px;
+    border-style: solid;
+
+}
+
+#picture-of-me {
+    border-radius: 1%;
+    width: 70%;
+}
+
+#nav-bar {
+    list-style-type: none;
+}
+
+#business-card-list {
+    margin-right: 30%;
+    margin-top: 3%;
+    list-style-type: none;
+}
+
+.business-card-list-item {
+    margin-left: 50%;
+    display: block;
+}
+
+.top-bar-text-item {
+    color: white;
+    display: inline;
+}
+
+.top-bar-nav-item{
+    display: inline;
+    margin-left: 5%;
+}
+
+.center-card-anchor {
+    color: black;
+}
