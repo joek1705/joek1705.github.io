@@ -1,5 +1,6 @@
 body{
     background-color: blue;
+    background-image: url("../images/background-image.png");
 }
 
 a{
