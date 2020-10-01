@@ -1,7 +1,13 @@
 * {
     box-sizing: border-box;
   }
+body {
+    background-color:#b3b3b3;
+}
 
+h1 {
+    color:#262626;
+}
 p {
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -17,7 +23,7 @@ a {
 }
 
 a:hover, a:focus {
-    color:white;
+    color:#3399ff;
 }
 
 footer {
