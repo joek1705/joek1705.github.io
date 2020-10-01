@@ -13,7 +13,7 @@ a {
     text-align: center;
 }
 
-a:hover , a:focus {
+a:hover, a:focus {
     color:white;
 }
 
@@ -36,7 +36,7 @@ footer {
 }
 
 #nav-bar a:hover, #nav-bar a:focus {
-   color: gray; 
+    color: gray;
 }
 
 #main-content {
@@ -45,7 +45,7 @@ footer {
 }
 
 #side-bar {
-    flex:10%;
+    flex: 5%;
     background-color: gray;
     padding: 20px;
 }
@@ -58,11 +58,13 @@ footer {
 
 #image-of-me {
     background-color: #aaa;
-    width: 100%;
-    padding: 20px;
+    width: 20%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
+    #image-of-me {
+        width: 50%;
+    }
     #nav-bar {
         flex-direction: column;
     }
