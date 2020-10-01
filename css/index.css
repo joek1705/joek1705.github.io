@@ -5,6 +5,9 @@
 p {
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.4em;
+    width: 70%;
+    margin-left: 2%;
 }
 
 a {
