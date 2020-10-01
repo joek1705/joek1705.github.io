@@ -13,8 +13,8 @@ a {
     text-align: center;
 }
 
-a:hover {
-    background-color: #ddd;
+a:hover , a:focus {
+    color:white;
 }
 
 footer {
@@ -35,9 +35,8 @@ footer {
     text-align: center;
 }
 
-#nav-bar a:hover {
-    background-color: #ddd;
-    color: black;
+#nav-bar a:hover, #nav-bar a:focus {
+   color: gray; 
 }
 
 #main-content {
@@ -46,7 +45,7 @@ footer {
 }
 
 #side-bar {
-    flex: 30%;
+    flex:10%;
     background-color: gray;
     padding: 20px;
 }
