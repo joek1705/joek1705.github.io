@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="images/favicon.PNG" />
+    <link rel="stylesheet" href="public/CSS/index.css" />
+    <!--
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    -->
+    <title>15-puzzle</title>
+  </head>
+  <body>
+    <button id="resetButton">Reset Game</button>
+    <h3 id="moveCount"></h3>
+    <div id="puzzleBoard"></div>
+  </body>
+  <script src="./public/JS/GameBoard.js"></script>
+  <script>
+    function drawBoard() {
+      boardDiv.innerHTML = "";
+      for (let row = 0; row < board.size; row++) {
+        for (let col = 0; col < board.size; col++) {
+          let square = document.createElement("span");
+          square.classList.add("square");
+          square.style.left = 125 * col + "px";
+          square.style.top = 125 * row + "px";
+          square.id = `${row}-${col}`;
+          let squareContents = board.BoardArray[row][col];
+          if (squareContents <= 15) {
+            square.innerHTML = squareContents;
+            square.classList.add("numSquare");
+          } else {
+            square.innerHTML = "";
+            square.classList.add("emptySquare");
+          }
+          boardDiv.append(square);
+        }
+      }
+    }
+    function setup() {
+      board.init();
+      board.print();
+      board.shuffleBoard(numShuffles);
+      moveCount = 0;
+      drawBoard();
+    }
+
+    let numShuffles = 100;
+    let boardDiv = document.getElementById("puzzleBoard");
+    let board = new GameBoard(4);
+    let moveCounter = document.getElementById("moveCount");
+    let resetButton = document.getElementById("resetButton");
+    let moveCount;
+    setup();
+
+    resetButton.addEventListener("click", (e) => {
+      moveCounter.innerHTML = "Moves: 0";
+      setup();
+    });
+    boardDiv.addEventListener("click", (e) => {
+      let clickedSquare = e.srcElement;
+      let row = Number(clickedSquare.id[0]);
+      let col = Number(clickedSquare.id[2]);
+
+      //returns new position of clicked square if it was moved
+      let currCellPos = board.MoveSquare(row, col);
+      if (currCellPos) {
+        let currCell = document.getElementById(
+          `${currCellPos[0]}-${currCellPos[1]}`
+        );
+        let emptyCell = document.getElementById(`${row}-${col}`);
+        let tmp = { css: currCell.style.cssText, id: currCell.id };
+        currCell.style.cssText = emptyCell.style.cssText;
+        currCell.id = emptyCell.id;
+        emptyCell.style.cssText = tmp.css;
+        emptyCell.id = tmp.id;
+        moveCounter.innerHTML = "Moves: " + Number(++moveCount);
+        if (!board.done()) {
+        } else {
+          alert("Congratulations - You completed the game");
+        }
+      }
+    });
+  </script>
+</html>
