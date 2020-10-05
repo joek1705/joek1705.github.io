@@ -1,97 +1,88 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 body {
-    background-color:#b3b3b3;
+  background-color: #b3b3b3;
 }
 
 h1 {
-    color:#262626;
+  color: #262626;
 }
 p {
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 1.4em;
-    font-size: 1.4em;
-    width: 70%;
-    margin-left: 2%;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4em;
+  font-size: 1.4em;
+  width: 70%;
+  margin-left: 2%;
 }
-
+#main-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 a {
-    color: black;
-    font-size: 1.4em;
-    padding: 14px 20px;
-    text-align: center;
-}
-h2 {
+  color: black;
+  padding: 14px 20px;
+  text-align: center;
 }
 
-a:hover, a:focus {
-    color:#3399ff;
+footer a {
+  font-size: 1.4em;
+}
+
+a:hover,
+a:focus {
+  color: #3399ff;
 }
 
 footer {
-    padding: 20px;
-    background-color: lightgray;
-    display: flex;
+  padding: 20px;
+  background-color: lightgray;
+  display: flex;
 }
 
 #nav-bar {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
 }
 
 #nav-bar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
 }
 
-#nav-bar a:hover, #nav-bar a:focus {
-    color: gray;
-}
-
-#main-content {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#side-bar {
-    flex: 5%;
-    background-color: gray;
-    padding: 20px;
+#nav-bar a:hover,
+#nav-bar a:focus {
+  color: gray;
 }
 
 #meat-of-the-content {
-    flex: 70%;
-    background-color: lightgray;
-    padding: 20px;
+  flex: 70%;
+  background-color: lightgray;
+  padding: 20px;
 }
 
 #image-of-me {
-    background-color: #aaa;
-    width: 50%;
+  background-color: #aaa;
+  width: 50%;
 }
 
 @media only screen and (min-width: 600px) {
-    #nav-bar > a {
-        font-size: 1.4em;
-        flex: 1;
-    }
-    #image-of-me {
-        width: 20%;
-    }
-    #nav-bar {
-        flex-direction: row;
-    }
-    footer {
-        flex-direction: row;
-    }
-    #main-content {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
+  #nav-bar > a {
+    font-size: 1.4em;
+    flex: 1;
+  }
+  #image-of-me {
+    width: 20%;
+  }
+  #nav-bar {
+    flex-direction: row;
+  }
+  footer {
+    flex-direction: row;
+  }
 }
