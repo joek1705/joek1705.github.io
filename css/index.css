@@ -27,6 +27,10 @@ a {
   text-align: center;
 }
 
+li {
+  padding-bottom: 15px;
+}
+
 footer a {
   font-size: 1.4em;
 }
