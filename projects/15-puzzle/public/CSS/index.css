@@ -12,6 +12,11 @@ body {
   border-radius: 1px;
 }
 
+
+#completion_message {
+  position: absolute;
+  margin-left: 500px;
+}
 .square {
     text-align: center;
     background-color: white;

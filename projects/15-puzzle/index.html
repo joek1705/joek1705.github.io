@@ -11,6 +11,7 @@
   <body>
     <button id="resetButton">Reset Game</button>
     <h3 id="moveCount"></h3>
+    <h3 id = "completion_message"></h3>
     <div id="puzzleBoard"></div>
   </body>
   <script src="./public/JS/GameBoard.js"></script>
@@ -48,12 +49,14 @@
     let boardDiv = document.getElementById("puzzleBoard");
     let board = new GameBoard(4);
     let moveCounter = document.getElementById("moveCount");
+    let completionMessage = document.getElementById("completion_message");
     let resetButton = document.getElementById("resetButton");
     let moveCount;
     setup();
 
     resetButton.addEventListener("click", (e) => {
       moveCounter.innerHTML = "Moves: 0";
+      completionMessage.innerHTML = "";
       setup();
     });
     boardDiv.addEventListener("click", (e) => {
@@ -76,7 +79,7 @@
         moveCounter.innerHTML = "Moves: " + Number(++moveCount);
         if (!board.done()) {
         } else {
-          alert("Congratulations - You completed the game");
+          completionMessage.innerHTML = "Congratulations - You completed the game";
         }
       }
     });
